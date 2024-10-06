@@ -1,0 +1,14 @@
+0000000000000000000000000000000000000000 dbba54cfd81506a20832aade85735bf4dc377b95 stumac <stuart.g.macgregor@gmail.com> 1711231268 -0400	clone: from https://github.com/stumac/kickstart.nvim.git
+dbba54cfd81506a20832aade85735bf4dc377b95 299dff2e28be8a78498fb8ea3ada453b0e967f70 stumac <stuart.g.macgregor@gmail.com> 1712198861 -0400	commit: kickstart TO THE BALLS
+299dff2e28be8a78498fb8ea3ada453b0e967f70 f876c1d61892bae34e5e1fb0532e9ac1eaffcce9 stumac <stuart.g.macgregor@gmail.com> 1712280363 -0400	commit: bufferline and neotree
+f876c1d61892bae34e5e1fb0532e9ac1eaffcce9 79090d181a8b7799a79e5e1fb13b4e9760944b99 stumac <stuart.g.macgregor@gmail.com> 1712364804 -0400	pull: Fast-forward
+79090d181a8b7799a79e5e1fb13b4e9760944b99 b27f1d05fdcb5a41db0ed8eae27410c893c554f2 stumac <stuart.g.macgregor@gmail.com> 1713231052 -0400	commit: adding golangci lint to none-ls
+b27f1d05fdcb5a41db0ed8eae27410c893c554f2 07a8ee218f36327f22ffa74e44e7988048ccf09a stumac <stuart.g.macgregor@gmail.com> 1725215351 -0400	commit: more screwing around
+07a8ee218f36327f22ffa74e44e7988048ccf09a f9088fd89f4d05c06bbded642779606fda200429 stumac <stuart.g.macgregor@gmail.com> 1725503571 -0400	commit: neogit added
+f9088fd89f4d05c06bbded642779606fda200429 fb0a8e32831c891c3c444ea40b288ea85d05bc0f stumac <stuart.g.macgregor@gmail.com> 1725572224 -0400	pull: Fast-forward
+fb0a8e32831c891c3c444ea40b288ea85d05bc0f ed059877639c9a01377cfa1c1355b5219d4261a6 stumac <stuart.g.macgregor@gmail.com> 1725742552 -0400	commit: pull conform out and make range formatting
+ed059877639c9a01377cfa1c1355b5219d4261a6 60d3bcd704f15c1308c743e41908d7512e828e54 stumac <stuart.g.macgregor@gmail.com> 1725928536 -0400	pull: Fast-forward
+60d3bcd704f15c1308c743e41908d7512e828e54 fffeea2a4d168ecc718ccc7d4717e9c9ce998f36 stumac <stuart.g.macgregor@gmail.com> 1726004701 -0400	pull: Fast-forward
+fffeea2a4d168ecc718ccc7d4717e9c9ce998f36 ebf8b6920007591df3894cfaf39c170f99a24288 stumac <stuart.g.macgregor@gmail.com> 1726089927 -0400	pull: Fast-forward
+ebf8b6920007591df3894cfaf39c170f99a24288 f1830212d428272e6b001a34cab88025079b4ca5 stumac <stuart.g.macgregor@gmail.com> 1726089938 -0400	commit: theme background changes, etc
+f1830212d428272e6b001a34cab88025079b4ca5 53b6813df3150b350ba6be5daabb9acf2a32a151 stumac <stuart.g.macgregor@gmail.com> 1727911286 -0400	pull: Fast-forward
