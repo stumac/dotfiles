@@ -112,31 +112,37 @@ export NVM_DIR="$HOME/.nvm"
 
 # chruby
 # set default ruby as well
+if type "chruby" > /dev/null; then
 source /usr/local/share/chruby/chruby.sh
 chruby ruby-3.2.1 
 source /usr/local/share/chruby/auto.sh
-
+fi
 
 #ruby --version
 
 # Add JBang to environment
-alias j!=jbang
-export PATH="$HOME/.jbang/bin:$PATH"
+# alias j!=jbang
+# export PATH="$HOME/.jbang/bin:$PATH"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # opam configuration
 [[ ! -r /home/stumac/.opam/opam-init/init.zsh ]] || source /home/stumac/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+if [ -d "$HOME"/.cargo ]; then
 . "$HOME/.cargo/env"
+fi
 
-
-
+if [ -d "$HOME/.asdf" ]; then
 # something about asdf
 . "$HOME/.asdf/asdf.sh"
 . "$HOME/.asdf/completions/asdf.bash"
+fi
 
+if [ -d "$HOME/.config/envman" ]; then
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+fi
 
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.json)"
 
@@ -163,4 +169,6 @@ unset __conda_setup
 
 
 # erlang world. elixir, gleam, etc.
+if [ -d  "$HOME/.cache/rebar3" ]; then
 export PATH=/home/stumac/.cache/rebar3/bin:$PATH
+fi
