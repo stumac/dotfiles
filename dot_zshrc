@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git chruby golang rails)
 
 source $ZSH/oh-my-zsh.sh
 source <(fzf --zsh)
@@ -89,11 +89,11 @@ source <(fzf --zsh)
 # fi
 
 # todo: clean this mess up you fool
-export PATH=$PATH:/usr/local/go/bin
-export GOBIN=$HOME/go/bin # seriously!?
-export GOROOT=/usr/local/go # you too!?!
-export PATH=$PATH:$HOME/go/bin
-export PATH=$PATH:$HOME/.emacs.d/bin
+# export PATH=$PATH:/usr/local/go/bin
+# export GOBIN=$HOME/go/bin # seriously!?
+# export GOROOT=/usr/local/go # you too!?!
+# export PATH=$PATH:$HOME/go/bin
+# export PATH=$PATH:$HOME/.emacs.d/bin
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -112,8 +112,19 @@ export NVM_DIR="$HOME/.nvm"
 
 # chruby
 # set default ruby as well
-source /usr/local/share/chruby/chruby.sh
-chruby ruby-3.2.1 
+
+
+# ruby env setup:
+if [[ -d "$HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh" ]]; then
+    source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
+    #source $HOMEBREW_PREFIX/share/chruby/auto.sh
+elif [[ -d /usr/local/share/chruby/chruby.sh ]]; then
+    source /usr/local/share/chruby/chruby.sh
+fi
+
+if hash chruby 2>/dev/null; then
+    chruby ruby-3.2.1
+fi
 #source /usr/local/share/chruby/auto.sh
 
 
@@ -123,11 +134,13 @@ chruby ruby-3.2.1
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
+if [[ -d "$HOME/linuxbrew" ]]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 # opam configuration
 [[ ! -r /home/stumac/.opam/opam-init/init.zsh ]] || source /home/stumac/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-if [[ -d "$HOME/.cargo/env"]]; then
+
+if [[ -d "$HOME/.cargo/env" ]]; then
 . "$HOME/.cargo/env"
 fi
 
@@ -138,6 +151,8 @@ if [[ -d "$HOME/companies" ]]; then
     done
 fi
 
+# I WANT MY ALIASES IN MY BASH SCRIPTS OK!?
+setopt aliases
 
 # something about asdf
 if [[ -d "$HOME/.asdf" ]]; then
