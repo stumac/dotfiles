@@ -90,7 +90,7 @@ source <(fzf --zsh)
 
 # todo: clean this mess up you fool
 # export PATH=$PATH:/usr/local/go/bin
-# export GOBIN=$HOME/go/bin # seriously!?
+export GOBIN=$HOME/go/bin # seriously!?
 # export GOROOT=/usr/local/go # you too!?!
 # export PATH=$PATH:$HOME/go/bin
 # export PATH=$PATH:$HOME/.emacs.d/bin
