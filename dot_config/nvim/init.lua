@@ -610,17 +610,22 @@ require('lazy').setup({
         ruff = {},
         black = {},
         debugpy = {},
-        solargraph = {
-          diagnostics = false,
-          autoformat = false,
-          formatting = false,
-        },
-        -- ['ruby-lsp'] = {
-        --   init_options = {
-        --     formatter = 'none',
-        --     linters = {},
-        --   },
+        -- solargraph = {
+        --   diagnostics = false,
+        --   autoformat = false,
+        --   formatting = false,
         -- },
+        ['ruby_lsp'] = {
+          init_options = {
+            enabledFeatures = {
+              diagnostics = false,
+              formatting = false,
+              autoformat = false,
+            },
+            formatter = 'none',
+            linters = {},
+          },
+        },
 
         --gleam = {
         -- cmd = { 'gleam', 'lsp' },
