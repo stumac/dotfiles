@@ -47,7 +47,7 @@ local plugin = {
     --   blend = 80,
     -- })
     vim.api.nvim_set_hl(0, 'CursorLineNr', {
-      bg = '#1b223b',
+      -- bg = '#1b223b',
       fg = '#9b009b',
       blend = 80,
     })

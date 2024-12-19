@@ -401,7 +401,7 @@ require('lazy').setup({
       -- See `:help telescope` and `:help telescope.setup()`
       require('telescope').setup {
         defaults = {
-          winblend = 40,
+          winblend = 5,
           file_ignore_patterns = { '^.git/' },
         },
         pickers = {
