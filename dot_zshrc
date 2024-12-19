@@ -149,7 +149,7 @@ if [[ -d "$HOME/.cargo/env" ]]; then
 fi
 
 # load company specific/secret files
-if [[ -d "$HOME/companies" ]]; then
+if [[ -d "$HOME/companies" && $(ls "$HOME/companies" | wc -l) -gt 0 ]]; then
     for file in $HOME/companies/**/*(.); do 
         source $file;
     done
