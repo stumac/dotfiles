@@ -866,7 +866,20 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc' },
+      ensure_installed = {
+        'bash',
+        'c',
+        'html',
+        'lua',
+        'markdown',
+        'vim',
+        'vimdoc',
+        'ruby',
+        'go',
+        'helm',
+        'gotmpl',
+        'zig',
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -935,5 +948,19 @@ require('lazy').setup({
 })
 
 require('lspconfig').gleam.setup {}
+
+-- setup to declare helm files as gotmpl files. This makes it possible for
+-- treesitter to work with gotmpl and not try to parse everything as yaml
+-- because Helm is in fact not just yaml. Unfortunately.
+vim.filetype.add {
+  extension = {
+    gotmpl = 'gotmpl',
+  },
+  pattern = {
+    ['.*/templates/.*%.tpl'] = 'helm',
+    ['.*/templates/.*%.ya?ml'] = 'helm',
+    ['helmfile.*%.ya?ml'] = 'helm',
+  },
+}
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
