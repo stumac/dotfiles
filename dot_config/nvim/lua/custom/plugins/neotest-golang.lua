@@ -9,7 +9,7 @@ local plugin = {
       'fredrikaverpil/neotest-golang',
       version = '*',
       dependencies = {
-        'leolulz/nvim-dap-go',
+        'leoluz/nvim-dap-go',
       },
     }, -- Installation
   },
@@ -27,6 +27,48 @@ local plugin = {
         require('neotest').run.run { suite = false, strategy = 'dap' }
       end,
       desc = 'Debug nearest test',
+    },
+    {
+      '<leader>tt',
+      function()
+        require('neotest').run.run()
+      end,
+      desc = 'Run nearest test',
+    },
+    {
+      '<leader>tf',
+      function()
+        require('neotest').run.run(vim.fn.expand '%')
+      end,
+      desc = 'Run tests in current file',
+    },
+    {
+      '<leader>ts',
+      function()
+        require('neotest').summary.toggle()
+      end,
+      desc = 'Toggle test summary',
+    },
+    {
+      '<leader>to',
+      function()
+        require('neotest').output.open { enter = true }
+      end,
+      desc = 'Open test output',
+    },
+    {
+      '<leader>tO',
+      function()
+        require('neotest').output_panel.toggle()
+      end,
+      desc = 'Toggle test output panel',
+    },
+    {
+      '<leader>tW',
+      function()
+        require('neotest').watch.toggle()
+      end,
+      desc = 'Watch tests',
     },
   },
 }
